@@ -88,6 +88,9 @@ Return ONLY this JSON structure with exactly 3 plans. Each plan must have a summ
   ]
 }`;
 
+// Note: Initially, I implemented this using the Gemini API key, but it required a paid plan.
+// Switched to Groq API instead since it offers free usage for llama models.
+
   try {
     const groqClient = getClient();
     const response = await groqClient.chat.completions.create({
